@@ -1,12 +1,29 @@
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Scanner;
+import java.util.scanner;
 
 public class WordsPerMinute {
 
-	public void Paragraph () {
+	public static String Paragraph throws IOException () {
 		
 		/* TODO
 		 * Read paragraph from file and display on console. Instruct user to time themselves
 		 */
-		return;
+		
+		String verse = "";
+		
+		verse = new String ( Files.readAllBytes( Paths.get(sampleText.txt) ) );
+		
+		
+//		Scanner input = new Scanner(sampleText.txt);
+//		
+//		while (input.hasNext()) {
+//			String verse = 
+//		}
+		
+		
+		return verse;
 	}
 	
 	public double wPM () {
