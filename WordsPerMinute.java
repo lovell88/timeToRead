@@ -14,7 +14,7 @@ public class WordsPerMinute {
 		double wordsPerMinute = 0;
 		
 		/* TODO 
-		 * Have the user enter how many seconds it took to read it, and then calculate file TEST ADDED!
+		 * Have the user enter how many seconds it took to read it, and then calculate file TEST ADDED!!
 		 */
 		
 		return wordsPerMinute;
