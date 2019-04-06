@@ -1,29 +1,34 @@
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Scanner;
-import java.util.scanner;
+
 
 public class WordsPerMinute {
 
-	public static String Paragraph throws IOException () {
+	String filePath = "sampleText.txt";
+	
+	public static String Paragraph() {
 		
 		/* TODO
 		 * Read paragraph from file and display on console. Instruct user to time themselves
 		 */
+//		
 		
+		String filePath = "sampleText.txt";
 		String verse = "";
 		
-		verse = new String ( Files.readAllBytes( Paths.get(sampleText.txt) ) );
+		try {
+			verse = new String ( Files.readAllBytes( Paths.get(filePath) ) );
+		} 
 		
-		
-//		Scanner input = new Scanner(sampleText.txt);
-//		
-//		while (input.hasNext()) {
-//			String verse = 
-//		}
-		
-		
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+		 
 		return verse;
+		
+		
+		
 	}
 	
 	public double wPM () {
