@@ -1,4 +1,4 @@
-public class amountToRead {
+public class AmountToRead extends WordsPerMinute {
     private final int totalChaptersInBOM = 239;
     private String startDateGoal;
     private String endDateGoal;
@@ -28,4 +28,6 @@ public class amountToRead {
     public void printResults() {
 
     }
+    
+    
 }

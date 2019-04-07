@@ -3,17 +3,50 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 
+
+
 public class WordsPerMinute {
 
 	String filePath = "sampleText.txt";
+	static double time = 0;
+	
+	// method to clear the console
+	public final static void clearConsole()	{
+		
+		try {
+	        if (System.getProperty("os.name").contains("Windows"))
+	            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+	        else
+	            Runtime.getRuntime().exec("clear");
+	    } catch (IOException | InterruptedException ex) {}
+
+	}
+	
+	
+	public final static void wpmIntro() {
+		
+		System.out.println("Next step: \n\n" +
+							"You will soon be presented with a paragraph to read that will help\n" +
+							"us determine your Words Per Minute (WPM).\n\n" +
+							"Please grab a stopwatch. Begin timing as soon as you press the Enter key.\n");
+		
+	}
+	
+	 public final static void pressAnyKeyToContinue() {
+		 
+	        System.out.println("Press Enter key to continue...");
+	        try {
+	            System.in.read();
+	        } 
+	        
+	        catch(Exception e) {}
+	        
+	 }
+	
 	
 	public static String Paragraph() {
 		
-		/* TODO
-		 * Read paragraph from file and display on console. Instruct user to time themselves
-		 */
-//		
-		
+				
 		String filePath = "sampleText.txt";
 		String verse = "";
 		
@@ -31,15 +64,18 @@ public class WordsPerMinute {
 		
 	}
 	
-	public double wPM () {
+	// pass the inputed time to the method
+	
+	public static void setTime (double newTime) {
+		time = newTime;
+	}
+	
+	// determine the WPM
+	public static double WPM () {
 		
-		double wordsPerMinute = 0;
+		//247 words in paragraph
 		
-		/* TODO 
-		 * Have the user enter how many seconds it took to read it, and then calculate file TEST ADDED!!
-		 */
-		
-		return wordsPerMinute;
+		return (247 / time) * 60;
 	}
 	
 	
