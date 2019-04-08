@@ -1,5 +1,6 @@
 public class amountToRead {
-    private final int totalChaptersInBOM = 239;
+    final int totalChaptersInBOM = 239;
+    final int totalWordsInBOM = 267931;
     private String startDateGoal;
     private String endDateGoal;
     private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy");
@@ -17,6 +18,12 @@ public class amountToRead {
         Date dateEnd = simpleDateFormat.parse(endDateGoal);
         AmountOfDays = Math.round((dateEnd.getTime() - dateStart.getTime()) / (double) 86400000);
         return AmountOfDays;
+    }
+
+    public double getWordsPerDay() {
+        amountOfDays = getAmountOfDays();
+        double wordsPerDay = totalWordsInBOM / amountOfDays;
+        return wordsPerDay;
     }
 
     public int getChaptersPerDay() {

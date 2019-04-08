@@ -1,14 +1,12 @@
 public class readingDuration {
     private int wordsPerMinute;
-    private int wordsPerDay;
+    private int wordsPerDay = amountToRead.getWordsPerDay;
 
-    public amountToRead() {}
+    public readingDuration() {}
 
-    public amountToRead(int wordsPerMinute, int wordsPerDay, double chaptersPerDay) {
+    public readingDuration(int wordsPerMinute, int wordsPerDay) {
         this.wordsPerMinute = wordsPerMinute;
         this.wordsPerDay = wordsPerDay;
-        this.chaptersPerDay = chaptersPerday;
-
     }
 
     public double getAmountOfTimeToRead() {
