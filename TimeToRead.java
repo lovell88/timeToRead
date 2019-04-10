@@ -6,15 +6,15 @@ public class TimeToRead {
 	
 	public static void main(String[] args) throws IOException {
 		
-		//clear the console (only works when in the command line!)
-		WordsPerMinute.clearConsole();
+	
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("Hello. This is a program where you can\n" +
-		"find out both how much of the Book of Mormon you need to read to finish it\n" + 
-		"according to your own goal, and how long you need to take each day to read,\n" +
-		"based on how fast your read. First, let's find out your goal.");
-		//ask for goal dates **TO BE ADDED BY ROBERT**
+		System.out.println(
+				"Hello. This is a program where you can find out both how much of the\n" +
+				"of the Book of Mormon you need to read to finish it according to your\n" + 
+				"own goal, and how long you need to take each day to read, based on\n" +
+				"how fast your read. First, let's find out your goal.\n");
+		//ask for goal dates 
 		System.out.print("Enter the start date for your goal (example, March 1): ");
 		String startMonth = input.next();
 		int startDay = input.nextInt();
@@ -28,12 +28,14 @@ public class TimeToRead {
 		//pause for them to get ready to read
 		WordsPerMinute.pressAnyKeyToContinue();
 		
+		//clear the console (only works when in the command line!)
+				WordsPerMinute.clearConsole();
+		
 		//output file as string
 		System.out.print(WordsPerMinute.Paragraph());
 		
 		//ask for the time it took to finish
-		
-		
+				
 		boolean continueInput = true;
 		
 		System.out.print("\n\n\nPlease enter the time in seconds the time it took to finish " + 
