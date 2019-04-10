@@ -1,40 +1,91 @@
-public class amountToRead {
-    final int totalChaptersInBOM = 239;
-    final int totalWordsInBOM = 267931;
-    private String startDateGoal;
-    private String endDateGoal;
-    private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy");
+public class AmountToRead {
+    final static int totalChaptersInBOM = 239;
+    final static int totalWordsInBOM = 267931;
 
-    public amountToRead() {}
-
-    public amountToRead(String StartDateGoal, String endDateGoal) {
-        this.StartDateGoal = startDateGoal;
-        this.EndDateGoal = endDateGoal;
+    public AmountToRead() {
     }
 
-    public int getAmountOfDays() {
-        int AmountOfDays = -1;
-        Date dateStart = simpleDateFormat.parse(startDateGoal);
-        Date dateEnd = simpleDateFormat.parse(endDateGoal);
-        AmountOfDays = Math.round((dateEnd.getTime() - dateStart.getTime()) / (double) 86400000);
-        return AmountOfDays;
+public static int getAmountOfDays(String startMonth, int startDay, String endMonth,
+int endDay) {
+    int dayStartSum = 0;
+    switch (startMonth) {
+        case "January": dayStartSum = 0;
+        break;
+        case "February": dayStartSum = 31;
+        break;
+        case "March": dayStartSum = 59;
+        break;
+        case "April": dayStartSum = 90;
+        break;
+        case "May": dayStartSum = 120;
+        break;
+        case "June": dayStartSum = 151;
+        break;
+        case "July": dayStartSum = 181;
+        break;
+        case "August": dayStartSum = 212;
+        break;
+        case "September": dayStartSum = 243;
+        break;
+        case "October": dayStartSum = 273;
+        break;
+        case "November": dayStartSum = 304;
+        break;
+        case "December": dayStartSum = 334;
+        break;
     }
+    dayStartSum += startDay;
+    int dayEndSum = 0;
 
-    public double getWordsPerDay() {
-        amountOfDays = getAmountOfDays();
-        double wordsPerDay = totalWordsInBOM / amountOfDays;
+    switch (endMonth) {
+        case "January": dayEndSum = 0;
+        break;
+        case "February": dayEndSum = 31;
+        break;
+        case "March": dayEndSum = 59;
+        break;
+        case "April": dayEndSum = 90;
+        break;
+        case "May": dayEndSum = 120;
+        break;
+        case "June": dayEndSum = 151;
+        break;
+        case "July": dayEndSum = 181;
+        break;
+        case "August": dayEndSum = 212;
+        break;
+        case "September": dayEndSum = 243;
+        break;
+        case "October": dayEndSum = 273;
+        break;
+        case "November": dayEndSum = 304;
+        break;
+        case "December": dayEndSum = 334;
+        break;
+    }
+    dayEndSum += endDay;
+    int difference = dayEndSum - dayStartSum;
+    return difference;
+}
+
+    public static double getWordsPerDay(String startMonth, int startDay, String endMonth,
+    int endDay) {
+        int amountOfDays = getAmountOfDays(startMonth, startDay, endMonth,
+        endDay);
+        double wordsPerDay = totalWordsInBOM / (double) amountOfDays;
         return wordsPerDay;
     }
 
-    public int getChaptersPerDay() {
-        int amountOfDays = getAmountOfDays();
-        int chaptersPerDay = totalChaptersInBOM / amountOfDays;
+    public static double getChaptersPerDay(String startMonth, int startDay, String endMonth,
+    int endDay) {
+        int amountOfDays = getAmountOfDays(startMonth, startDay, endMonth,
+        endDay);
+        double chaptersPerDay = (double) totalChaptersInBOM / (double) amountOfDays;
         return chaptersPerDay;
     }
 
-    public void printResults() {
+    public static void printResults() {
 
     }
-    
-    
+
 }

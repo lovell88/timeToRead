@@ -1,17 +1,19 @@
-public class readingDuration {
-    private int wordsPerMinute;
-    private int wordsPerDay = amountToRead.getWordsPerDay;
+public class ReadingDuration {
+    private static double wordsPerMinute = WordsPerMinute.WPM();
+    public ReadingDuration() {}
 
-    public readingDuration() {}
-
-    public readingDuration(int wordsPerMinute, int wordsPerDay) {
-        this.wordsPerMinute = wordsPerMinute;
-        this.wordsPerDay = wordsPerDay;
-    }
-
-    public double getAmountOfTimeToRead() {
+    public static double getAmountOfTimeToRead(String startMonth, int startDay, String endMonth,
+    int endDay) {
+        double wordsPerDay = AmountToRead.getWordsPerDay(startMonth, startDay, endMonth,
+        endDay);
         double amountOfTimeToRead = wordsPerDay / wordsPerMinute;
         return amountOfTimeToRead;
     }
+
+    public static void printResults() {
+
+    }
+
+
 
 }
