@@ -15,10 +15,10 @@ public class TimeToRead {
 		"according to your own goal, and how long you need to take each day to read,\n" +
 		"based on how fast your read. First, let's find out your goal.");
 		//ask for goal dates **TO BE ADDED BY ROBERT**
-		System.out.print("Enter the start date for your reading (example, March 1)");
+		System.out.print("Enter the start date for your goal (example, March 1): ");
 		String startMonth = input.next();
 		int startDay = input.nextInt();
-		System.out.print("Enter the end date for your reading (example, August 3)");
+		System.out.print("Enter the end date for your goal (example, August 3): ");
 		String endMonth = input.next();
 		int endDay = input.nextInt();
 
@@ -67,17 +67,19 @@ public class TimeToRead {
 		//present the time needed to read and other stats **TO BE ADDED BY ROBERT**
 		double chaptersPerDay = AmountToRead.getChaptersPerDay(startMonth, startDay, endMonth, endDay);
 		double timeToRead = ReadingDuration.getAmountOfTimeToRead(startMonth, startDay, endMonth, endDay);
-		System.out.printf("\nYou should read about %.2f chapters per day to finish your goal.", chaptersPerDay);
-		System.out.printf("\nYou should take about %.2f minutes every day to read that amount.\n", timeToRead);
+		System.out.printf("\nYou should read about %.1f chapters per day to finish your goal.", chaptersPerDay);
+		System.out.printf("\nYou should take about %.1f minutes every day to read that amount.\n", timeToRead);
 
 		PrintWriter myfile = new PrintWriter("outputText.txt");
-		myfile.println("\nHere are your results: \n\n");
+		myfile.println("\nHere are your results:");
 		myfile.printf("Your words per minute (WPM) is: %.2f", WordsPerMinute.WPM());
 		myfile.printf("\nYou should read about %.2f chapters per day to finish your goal.", chaptersPerDay);
 		myfile.printf("\nYou should take about %.2f minutes every day to read that amount.\n", timeToRead);
 
-		System.out.println("The data has been put in a file for you to print/use.\n" + 
+		System.out.println("\nThe data has been put in a file for you to print/use.\n" + 
 		"Have a great day!");
+		myfile.close();
+		input.close();
 		
 		
 		
