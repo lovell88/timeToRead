@@ -1,4 +1,4 @@
-public class ReadingDuration {
+public class ReadingDuration extends WordsPerMinute {
     private static double wordsPerMinute = WordsPerMinute.WPM();
 
     public ReadingDuration() {
