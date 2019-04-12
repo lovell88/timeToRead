@@ -1,4 +1,4 @@
-public class AmountToRead {
+public class AmountToRead extends WordsPerMinute {
     final static int totalChaptersInBOM = 239;
     final static int totalWordsInBOM = 267931;
 

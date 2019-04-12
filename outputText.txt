@@ -1,12 +1,5 @@
 
-<<<<<<< HEAD
-Here are your results:
-Your words per minute (WPM) is: 329.33
-You should read about 239.00 chapters per day to finish your goal.
-You should take about 813.56 minutes every day to read that amount.
-=======
 Here are your results:
 Your words per minute (WPM) is: 123.50
-You should read about 3.79 chapters per day to finish your goal.
-You should take about 34.44 minutes every day to read that amount.
->>>>>>> d235741cdec4ae1273137ecc4e192d7521458bdc
+You should read about 8.24 chapters per day to finish your goal.
+You should take about 74.81 minutes every day to read that amount.

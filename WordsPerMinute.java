@@ -22,16 +22,17 @@ public class WordsPerMinute {
 
 	}
 	
-	
+	// present an introduction to the WPM test paragraph
 	public final static void wpmIntro() {
 		
-		System.out.println("Next step: \n\n" +
+		System.out.println("\nNext step: \n\n" +
 							"You will soon be presented with a paragraph to read that will help\n" +
 							"us determine your Words Per Minute (WPM).\n\n" +
 							"Please grab a stopwatch. Begin timing as soon as you press the Enter key.\n");
 		
 	}
 	
+	 // method to hold the program until the Enter key is pressed
 	 public final static void pressAnyKeyToContinue() {
 		 
 	        System.out.println("Press Enter key to continue...");
@@ -43,7 +44,7 @@ public class WordsPerMinute {
 	        
 	 }
 	
-	
+	// read the sample paragraph from a file
 	public static String Paragraph() {
 		
 				
